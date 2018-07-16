@@ -1,5 +1,5 @@
 node('kube-label') {
-    docker.withRegistry('https://hub.docker.com/', 'docker-hub-credentials') {
+    docker.withRegistry('https://hub.docker.com/') {
     	def mvnHome
 
     	stage('checkout'){
