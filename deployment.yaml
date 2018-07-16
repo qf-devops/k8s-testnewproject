@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: testnewproject
-        image: prakashg84/test:testnewproject
+        image: devopsjuly22017/test:testnewproject
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
