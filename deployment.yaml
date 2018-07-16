@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: testnewproject
+spec:
+  template:
+    metadata:
+      labels:
+        app: testnewproject
+    spec:
+      containers:
+      - name: testnewproject
+        image: prakashg84/test:testnewproject
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
