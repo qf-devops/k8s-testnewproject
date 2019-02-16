@@ -22,12 +22,12 @@ node('kube-label') {
     	
 
     	stage('create deployment'){
-    	    sh 'kubectl delete deployments testnewprojectapi || true'
+    	    //sh 'kubectl delete deployments testnewprojectapi || true'
 	    sh 'kubectl create -f deployment.yaml --validate=false'
     	}
 
     	stage('create service'){
-	    sh 'kubectl delete services testnewprojectapiservice || true'
+	  //  sh 'kubectl delete services testnewprojectapiservice || true'
 	    sh 'kubectl create -f services.yaml --validate=false'
     	}
    
