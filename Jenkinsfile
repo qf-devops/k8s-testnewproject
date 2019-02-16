@@ -5,7 +5,7 @@ node('kube-label') {
     	stage('checkout'){
 
         mvnHome = tool 'M3'
-        git url: 'https://github.com/prakashg1984/workplace.git'
+        git url: 'https://github.com/quickfixtech/k8s-testnewproject.git'
 
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
