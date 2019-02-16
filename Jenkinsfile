@@ -17,8 +17,8 @@ node('kube-label') {
 	        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean install"
     	}
 
-    	stage('create docker image'){
-		        sh 'docker login --username devopsjuly22017 --password devops@123'
+    	 stage('create docker image'){
+		        sh 'docker login --username devopsjuly22017 --password-stdin'
 		        sh ("docker build -t testnewproject .")
 		        sh ("docker tag  testnewproject devopsjuly22017/test:testnewproject")
     	}
