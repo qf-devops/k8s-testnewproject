@@ -19,9 +19,7 @@ node('kube-label') {
 
     	 
 
-    	stage('push docker image'){
-			sh ("docker push devopsjuly22017/test:testnewproject")
-    	}
+    	
 
     	stage('create deployment'){
     	    sh 'kubectl delete deployments testnewprojectapi || true'
