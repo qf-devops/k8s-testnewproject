@@ -12,7 +12,7 @@ node('kube-label') {
         println commit_id
         }
 
-    dir('testnewproject'){
+   
         stage('build'){
 	        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean install"
     	}
@@ -36,6 +36,6 @@ node('kube-label') {
 	    sh 'kubectl delete services testnewprojectapiservice || true'
 	    sh 'kubectl create -f services.yaml --validate=false'
     	}
-    }
+   
     }
 }
