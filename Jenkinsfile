@@ -18,7 +18,7 @@ node('kube-label') {
     	}
 
     	stage('create docker image'){
-		        sh 'docker login --username devopsjuly22017 --password devops@123'
+		        sh 'docker login --username devopsjuly22017 --password xxxxxxx'
 		        sh ("docker build -t testnewproject .")
 		        sh ("docker tag  testnewproject devopsjuly22017/test:testnewproject")
     	}
